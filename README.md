@@ -62,3 +62,8 @@ To run the application locally, follow these steps:
     scp /path/to/local/file <username>@<vm-ip>:/path/on/remote/vm
     ```
 5. Create load balancer manually using arm template.Configure basic settings.Connect load balancer to linux virtual machine.Once the load balancer is set up, you can test it by accessing your application through the load balancer's public IP or DNS name.
+### Architecture and limitations
+1. An ASP.NET web application using C# to display a custom greeting message and current time.
+2. Azure infrastructure components such as Virtual Machines, Load Balancers, and Public IPs for deployment.
+3. Use of ARM (Azure Resource Manager) templates for Infrastructure as Code (IaC) to define and deploy the Azure resources.
+4. Azure VMs and associated resources have costs, so manage resource usage and deallocate resources when not in use.
