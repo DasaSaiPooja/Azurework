@@ -1,4 +1,4 @@
-This repository contains a simple ASP.NET web application that displays a custom greeting message including the current server time and logs each request.This guide specify how to create resources in azure. The deployment guide below explains how to run the application locally and deploy it to both Windows and Linux environments on Azure.
+This repository contains a simple ASP.NET web application that displays a custom greeting message including the current server time and logs each request.This also contains arm template for creating virtual machine(windows and linux). The deployment guide below explains how to run the application locally and deploy it to both Windows and Linux environments on Azure.
 ## Prerequisites
 Before you begin, ensure you have the following:
 - An Azure Account
@@ -32,7 +32,10 @@ To run the application locally, follow these steps:
    - Use Remote Desktop Protocol (RDP) to connect to the VM using the provided credentials(virtual machine password).
 4. After connecting to the VM, open Server Manager.
    - In Server Manager, click on "Add roles and features."
-   - Follow the wizard to install the Web Server (IIS) role.
+   - In the Before You Begin page of the wizard, click "Next" to proceed.
+   - Choose the "Role-based or feature-based installation" option and click "Next."
+   - In the Select server roles page, scroll down or search for "Web Server (IIS)" role.Check the box next to "Web Server (IIS)" to select it.Click "Next" to             continue.
+   - On the Select role services page, you can choose specific components and features of IIS to install. For a basic setup, you can go with the default selections       or customize as needed.
    - Once IIS is installed, you can deploy your web application to the appropriate directory
 5. Copy your web application files to the directory where IIS is serving content. Ensure that the necessary permissions are set for the web application files and directories.
 6. Open a web browser on your local machine.Enter the public IP address or DNS name of your Azure VM in the browser's address bar.
@@ -58,4 +61,4 @@ To run the application locally, follow these steps:
     ``` bash
     scp /path/to/local/file <username>@<vm-ip>:/path/on/remote/vm
     ```
-5. Create load balancer manually using arm template.Configure basic settings.Once the load balancer is set up, you can test it by accessing your application through the load balancer's public IP or DNS name.
+5. Create load balancer manually using arm template.Configure basic settings.Connect load balancer to linux virtual machine.Once the load balancer is set up, you can test it by accessing your application through the load balancer's public IP or DNS name.
