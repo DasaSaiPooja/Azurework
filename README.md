@@ -23,7 +23,7 @@ To run the application locally, follow these steps:
 6. Open azure portal.
     - create resource group in azure portal specifying subscription,resource group name,location.
     - select deploy custom template and navigate to load file and upload arm templates .Click on review and create.
-- Deployment Instructions for Azure (Windows and Linux)
+
  ### Windows Deployment
 1. Manually create a new Azure Virtual Machine using the arm template.
 2. Configure the VM settings, such as resource group, VM name, region, VM size, administrator account, and networking options (public IP, inbound port rules for HTTP/HTTPS).
